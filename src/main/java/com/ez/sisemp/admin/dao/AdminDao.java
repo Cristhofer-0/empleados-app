@@ -28,12 +28,12 @@ public class AdminDao {
 
         String rolDescripcion;
         if(rs.getInt("id_rol") == 1){
-            rolDescripcion = "Administrador";
+            rolDescripcion = "Administrador"; //SI ES 1 ES ADMIN
         }else{
             rolDescripcion = "Usuario";
         }
 
-        return new Usuario(
+        return new Usuario( //OBTIENE DATOS DE LA BASE DE DATOS
             rs.getInt("id"),
             rs.getString("nombre_usuario"),
             rs.getString("contrasena"),

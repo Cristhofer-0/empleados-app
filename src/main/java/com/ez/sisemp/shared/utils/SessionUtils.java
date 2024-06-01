@@ -10,7 +10,7 @@ public class SessionUtils {
     private static final String LOGIN_JSP = "/login/login.jsp";
 
     private SessionUtils(){}
-
+ ///SABER SI INICIO SESION EL USUARIO
     public static boolean validarSesion(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         if(request.getSession().getAttribute("user") == null){
             request.getRequestDispatcher(LOGIN_JSP).forward(request, response);
