@@ -28,7 +28,7 @@ public class EmpleadoBusiness {
         this.parametroDao = new ParametroDao();
     }
 
-    public void registrarEmpleado(Empleado empleado) throws SQLException, ClassNotFoundException {
+    public void registrarEmpleado(Empleado empleado) throws SQLException, ClassNotFoundException { //FUNCION PARA REG
         empleado = new Empleado(generarCodigoEmpleado(), empleado.nombres(), empleado.apellidoPat(), empleado.apellidoMat(), empleado.idDepartamento(), empleado.correo(), empleado.salario(), empleado.fechaNacimiento());
         validarCampos(empleado);
         try {
